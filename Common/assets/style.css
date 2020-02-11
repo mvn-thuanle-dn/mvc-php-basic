@@ -1,0 +1,49 @@
+body {
+  position: relative;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: right;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0%);
+}
+
+tr,
+thead,
+th,
+td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+table {
+  position: relative;
+  height: auto;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  font-size: 20px;
+  font-family: "Ubuntu";
+  text-transform: uppercase;
+}
+
+.footer li:hover {
+  background-color: #ddd;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+
+/* css for detail blog */
