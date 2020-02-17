@@ -20,7 +20,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title><?php echo BLOG . " " . $_GET['idblog']; ?></title>
+	<title><?php echo BLOG . ' ' . $_GET['idblog']; ?></title>
 	<link rel="stylesheet" type="text/css" href="<?php echo ORGINAL_PATH . CSS; ?>">
 </head>
 <body>
@@ -63,7 +63,8 @@
 			?>
 	</table>
 	<div class="edit-blog" style="margin-right: 150px;transform: translate(95%, 95%);">
-			<a href="<?php echo ORGINAL_PATH . C_BLOG . "?idblog=" . $_GET['idblog']; $_SESSION['bedit'] = 'bedit'; ?>" title="edit"><input type="button" name="edit" value="EDIT"></a>
+			<?php $_SESSION['blog'] = 'bedit'; ?>
+			<a href="<?php echo ORGINAL_PATH . C_BLOG . "?idblog=" . $_GET['idblog']; ?>" title="edit"><input type="button" name="edit" value="EDIT"></a>
 	</div>
 	<?php
 		require_once dirname(__DIR__) . '/Common/footer.php';

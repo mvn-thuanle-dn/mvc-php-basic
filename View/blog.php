@@ -20,6 +20,14 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo ORGINAL_PATH . CSS; ?>">
 </head>
 <body>
+	<?php
+		if(!empty($_GET['message'])) {
+			$success = 'Update successfull at record with id = ';
+			$message = $success . $_GET['message'];
+			echo $message;
+			unset($_GET['message']);
+		}
+	?>
 	<table>
 		<caption>
 			<h1>BLOG TABLE</h1>
@@ -45,7 +53,7 @@
 			<tr>
 				<td><a href="detail_blog.php?idblog=<?php echo $value['id']; ?>" title="detail-blog"><?php echo $value['id'];?></a></td>
 				<td><?php echo $value['category_id']; ?></td>
-				<td><?php echo $value['user_id']; ?></td>
+				<td><a href="detail_user.php?iduser=<?php echo $value['user_id']; ?>" title="detail-user"><?php echo $value['user_id']; ?></a></td>
 				<td><?php echo $value['title']; ?></td>
 				<td><?php echo $value['view']; ?></td>
 				<td><?php echo $value['is_active']; ?></td>

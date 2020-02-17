@@ -13,7 +13,7 @@
     if (isset($_GET['page'])) {
         $page = trim($_GET['page']);
     }
-
+    
     switch ($page) {
         case 'blog':
             $_SESSION['blog'] = 'blog';
@@ -64,16 +64,14 @@
                 <td>
                     <?php
                         switch (htmlspecialchars($val)) {
-                            case 'blog':
-                                $_SESSION['blog'] = 'blog';
+                            case 'user':
                                 ?>
-                                <a href="<?php echo ORGINAL_PATH . C_BLOG;?>" title="blog"><?php echo htmlspecialchars($val);?></a>
+                                <a href="<?php echo ORGINAL_PATH . C_USER;?>" title="user"><?php echo htmlspecialchars($val); $_SESSION['user'] = 'user';?></a>
                                 <?php
                                 break;
-                            case 'user':
-                                $_SESSION['user'] = 'user';
+                            case 'blog':
                                 ?>
-                                <a href="<?php echo ORGINAL_PATH . C_USER;?>" title="user"><?php echo htmlspecialchars($val);?></a>
+                                <a href="<?php echo ORGINAL_PATH . C_BLOG;?>" title="blog"><?php echo htmlspecialchars($val); $_SESSION['blog'] = 'blog';?></a>
                                 <?php
                                 break;
                             default:

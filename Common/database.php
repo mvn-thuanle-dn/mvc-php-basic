@@ -24,5 +24,4 @@
 	}
 	$db = new DB();
 	$connection = $db->connection();
-	// var_dump($connection);
 ?>

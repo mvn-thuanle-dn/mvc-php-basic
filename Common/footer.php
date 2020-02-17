@@ -21,13 +21,13 @@
 			switch ($val) {
 				case 'user':
 					?>
-					<li><a href="<?php echo ORGINAL_PATH . C_USER;?>" title="user"><?php echo htmlspecialchars($val);?></a></li>
+					<li><a href="<?php echo ORGINAL_PATH . V_USER;?>" title="user"><?php echo htmlspecialchars($val);?></a></li>
 					<?php
 					break;
 
 				case 'blog':
 					?>
-					<li><a href="<?php echo ORGINAL_PATH . C_BLOG;?>" title="blog"><?php echo htmlspecialchars($val);?></a></li>
+					<li><a href="<?php echo ORGINAL_PATH . V_BLOG;?>" title="blog"><?php echo htmlspecialchars($val);?></a></li>
 					<?php
 					break;
 				
